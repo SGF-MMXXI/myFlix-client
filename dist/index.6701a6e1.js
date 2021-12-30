@@ -22748,24 +22748,24 @@ class MainView extends _reactDefault.default.Component {
     constructor(){
         super();
         this.state = {
-            movies: [
+            movie: [
                 {
                     _id: 1,
                     Title: 'Spider-man Far From Home',
                     Description: 'Peter Parkers relaxing European vacation takes an unexpected turn when Nick Fury shows up in his hotel room to recruit him for a mission.',
-                    ImagePath: '...'
+                    ImagePath: 'https://m.media-amazon.com/images/M/MV5BMGZlNTY1ZWUtYTMzNC00ZjUyLWE0MjQtMTMxN2E3ODYxMWVmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UY1200_CR90,0,630,1200_AL_.jpg'
                 },
                 {
                     _id: 2,
                     Title: 'Beautiful Noise',
                     Description: 'Beautiful Noise is a 2014 American music documentary film, written and directed by Eric Green. The film documents three rock bands—Cocteau Twins, The Jesus and Mary Chain, and My Bloody Valentine—and their influence on shoegazing and other alternative rock genres. Beautiful Noise features extracts from over 50 interviews with bands and artists, as well as archival footage and music videos.',
-                    ImagePath: '...'
+                    ImagePath: 'https://upload.wikimedia.org/wikipedia/en/f/fc/Beautiful_Noise_poster.jpg'
                 },
                 {
                     _id: 3,
                     Title: 'The Decline of Western Civilization',
                     Description: 'A documentary film or documentary is a non-fictional motion-picture intended to document reality, primarily for the purposes of instruction, education, or maintaining a historical record.',
-                    ImagePath: '...'
+                    ImagePath: 'https://images-na.ssl-images-amazon.com/images/I/81gb-j1XFsL.jpg'
                 }
             ],
             selectedMovie: null
@@ -22777,8 +22777,8 @@ class MainView extends _reactDefault.default.Component {
         });
     }
     render() {
-        const { movies , selectedMovie  } = this.state;
-        if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+        const { movie , selectedMovie  } = this.state;
+        if (movie.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
@@ -22804,17 +22804,17 @@ class MainView extends _reactDefault.default.Component {
                     lineNumber: 35
                 },
                 __self: this
-            }) : movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
-                    movie: movie,
-                    onMovieClick: (movie1)=>{
-                        this.setSelectedMovie(movie1);
+            }) : movie.map((movie1)=>/*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
+                    movie: movie1,
+                    onMovieClick: (movie2)=>{
+                        this.setSelectedMovie(movie2);
                     },
                     __source: {
                         fileName: "src/components/main-view/main-view.jsx",
                         lineNumber: 37
                     },
                     __self: this
-                }, movie._id)
+                }, movie1._id)
             )
         }));
     }
@@ -22825,7 +22825,44 @@ class MainView extends _reactDefault.default.Component {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"93EGy","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bNOJJ","../movie-card/movie-card":"6EiBJ","../movie-view/movie-view":"ikZdr"}],"93EGy":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","../movie-card/movie-card":"6EiBJ","../movie-view/movie-view":"ikZdr","@parcel/transformer-js/src/esmodule-helpers.js":"93EGy","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bNOJJ"}],"6EiBJ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4249 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4249.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MovieCard", ()=>MovieCard
+);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class MovieCard extends _reactDefault.default.Component {
+    render() {
+        const { movie , onMovieClick  } = this.props;
+        return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+            className: "movie-card",
+            onClick: ()=>{
+                onMovieClick(movie);
+            },
+            __source: {
+                fileName: "src/components/movie-card/movie-card.jsx",
+                lineNumber: 7
+            },
+            __self: this,
+            children: movie.Title
+        }));
+    }
+}
+
+  $parcel$ReactRefreshHelpers$4249.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"93EGy","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bNOJJ"}],"93EGy":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -22977,44 +23014,7 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"f2oeP"}],"6EiBJ":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4249 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4249.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MovieCard", ()=>MovieCard
-);
-var _jsxRuntime = require("react/jsx-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-class MovieCard extends _reactDefault.default.Component {
-    render() {
-        const { movie , onMovieClick  } = this.props;
-        return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-            className: "movie-card",
-            onClick: ()=>{
-                onMovieClick(movie);
-            },
-            __source: {
-                fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 7
-            },
-            __self: this,
-            children: movie.Title
-        }));
-    }
-}
-
-  $parcel$ReactRefreshHelpers$4249.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"93EGy","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bNOJJ"}],"ikZdr":[function(require,module,exports) {
+},{"react-refresh/runtime":"f2oeP"}],"ikZdr":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3741 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -23048,6 +23048,8 @@ class MovieView extends _reactDefault.default.Component {
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
                         src: movie.ImagePath,
+                        crossorigin: "*",
+                        width: "250px",
                         __source: {
                             fileName: "src/components/movie-view/movie-view.jsx",
                             lineNumber: 11
