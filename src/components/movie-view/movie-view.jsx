@@ -1,4 +1,6 @@
 import React from 'react';
+import './movie-view.scss';
+import PropTypes from 'prop-types';
 
 export class MovieView extends React.Component {
 
@@ -21,7 +23,7 @@ export class MovieView extends React.Component {
     return (
       <div className="movie-view">
         <div className="movie-poster">
-        <img src={movie.ImagePath} crossorigin="*" width='250px'/>
+        <img src={movie.ImagePath} crossOrigin="true" width="300"/>
         </div>
         <div className="movie-title">
           <span className="label">Title: </span>
@@ -31,6 +33,7 @@ export class MovieView extends React.Component {
           <span className="label">Description: </span>
           <span className="value">{movie.Description}</span>
         </div>
+        
 
         <button onClick={() => { onBackClick(null); }}>Back</button>
 
@@ -38,3 +41,13 @@ export class MovieView extends React.Component {
     );
   }
 }
+
+MovieView.propTypes = {
+  movie: PropTypes.shape({
+    Title: PropTypes.string.isRequired,
+    Description: PropTypes.string.isRequired,
+    //Genre: PropTypes.string,
+    Director: PropTypes.array,
+    ImagePath: PropTypes.string.isRequired,
+  }).isRequired,
+};

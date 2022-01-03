@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-
+import PropTypes from 'prop-types';
+import { RegistrationView } from "../registration-view/registration-view";
 import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
@@ -12,15 +13,16 @@ export class MainView extends React.Component {
     this.state = {
       movies: [],
       selectedMovie: null,
-      user: null
-    }
+      user: null,
+      register: null
+    };
   }
  
   componentDidMount(){
     axios.get('https://myflix-sgf.herokuapp.com/movies')
       .then(response => {
         this.setState({
-          movies: response.data
+          movies: response.data,
         });
       })
       .catch(error => {
@@ -28,10 +30,15 @@ export class MainView extends React.Component {
       });
   }
 
-  setSelectedMovie(newSelectedMovie) {
+  setSelectedMovie(movie) {
     this.setState({
-     
-      selectedMovie: newSelectedMovie
+    selectedMovie: movie
+    });
+}
+
+  onRegistration(register) {
+    this.setState({
+      register
     });
   }
 
@@ -44,7 +51,11 @@ export class MainView extends React.Component {
   render() {
     const { movies, selectedMovie, user } = this.state;
   
-    if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
+    if (!user) 
+          return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
+        
+        if (!user)
+          return <RegistrationView onRegistration={user => this.onRegistration(user)} />;  
   
     if (movies.length === 0) return <div className="main-view"/>
   
