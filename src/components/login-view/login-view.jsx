@@ -29,6 +29,7 @@ export function LoginView(props) {
       <br />
       <br />
       <button type="submit" onClick={handleSubmit}>Log In</button>
+      <button type="submit" onClick={handleSubmit}>Register</button>
     </form>
   );
 }
