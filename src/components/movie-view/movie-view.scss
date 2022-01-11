@@ -1,7 +1,12 @@
 .movie-view {
-  margin-top: 100px;
-  margin-bottom: 50px;
+  width: 100%;
+  
 }
+
+.movie-poster {
+  text-align: center;
+}
+
 .alignCenter {
   text-align: center;
   margin-top: 20px;
@@ -10,11 +15,18 @@
   font-weight: bold;
 }
 
-#title {
-  font-size: 30px;
+.movie-title {
+  font-size: 28px !important;
   font-weight: bold;
+  color:#f5ed00 !important ;
+  font-family: 'Racing Sans One', cursive !important;
+  text-decoration: underline;
 }
 
-.back-button {
-  margin-left: 20px;
-}
+.mview_body{background-color: #0070b5!important;
+            margin-top: 25px;
+            margin-bottom: 1em;
+            padding: 25px;
+           border-radius: 5px;}
+
+.mvBody_container{margin-top:-2.5em ;}

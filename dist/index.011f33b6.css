@@ -1,0 +1,157 @@
+.registrationCard {
+  background-color: #0070b5 !important;
+  width: 600px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+.login-container {
+  margin-top: 100px;
+}
+
+.loginCard {
+  background-color: #0070b5 !important;
+  width: 600px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.mv_card {
+  margin: 70px 0px 20px 0px;
+  background-color: #141414 !important;
+  color: black;
+}
+
+.movie-genre {
+  font-size: 16px;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.mv_title {
+  background-color: #0070b5 !important;
+  padding: 5px;
+  text-align: center;
+  color: #f5ed00 !important;
+  font-family: "Racing Sans One", cursive !important;
+}
+
+.movie-text {
+  color: white !important;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.movie_img {
+  text-align: center;
+}
+
+.movie-title {
+  height: 4em;
+  font-size: medium !important;
+  text-align: center;
+  padding: 10px;
+}
+
+.card-text {
+  background-color: white;
+  margin-top: -1em;
+  padding: 15px;
+}
+
+.movie-img {
+  width: 20% !important;
+}
+
+.mvc_body {
+  margin-top: -3em;
+}
+.movie-view {
+  width: 100%;
+}
+
+.movie-poster {
+  text-align: center;
+}
+
+.alignCenter {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.movie-title {
+  font-size: 28px !important;
+  font-weight: bold;
+  color: #f5ed00 !important;
+  font-family: "Racing Sans One", cursive !important;
+  text-decoration: underline;
+}
+
+.mview_body {
+  background-color: #0070b5 !important;
+  margin-top: 25px;
+  margin-bottom: 1em;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.mvBody_container {
+  margin-top: -2.5em;
+}
+.main-view {
+  background: #141414;
+  width: 100%;
+  display: inline-block;
+}
+
+.mainNavbar {
+  background: #162b48;
+}
+
+body {
+  font-family: "Teko", sans-serif !important;
+}
+
+.movie-view {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.alignCenter {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+#title {
+  font-size: 300px;
+  font-weight: bold;
+}
+
+.back-button {
+  margin-left: 20px;
+}
+body {
+  background: #141414 !important;
+}
+
+header {
+  text-align: center;
+  background-color: #0070b5 !important;
+  padding: 10px;
+}
+
+.logo {
+  color: #f5ed00 !important;
+  font-family: "Racing Sans One", cursive;
+  text-decoration: underline;
+}
+/*# sourceMappingURL=index.011f33b6.css.map */

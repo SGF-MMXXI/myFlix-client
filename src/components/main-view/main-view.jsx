@@ -1,11 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+
 import { RegistrationView } from "../registration-view/registration-view";
 import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 
+import { Container, Col, Row } from "react-bootstrap";
 import "./main-view.scss";
 
 export class MainView extends React.Component {
@@ -53,23 +55,45 @@ export class MainView extends React.Component {
   render() {
     const { movies, selectedMovie, user } = this.state;
   
-    if (!user) 
-          return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
-        
-        if (!user)
-          return <RegistrationView onRegistration={user => this.onRegistration(user)} />;  
+    if (!user)
+      return (
+        <div>
+          <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />
+          <RegistrationView />
+        </div>
+      );
   
     if (movies.length === 0) return <div className="main-view"/>
   
     return (
       <div className="main-view">
-        {selectedMovie
-          ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
-          : movies.map(movie => (
-            <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }}/>
-          ))
-        }
-      </div>
-    );
-  }
+      <Container fluid>
+        <Row className="justify-content-md-center">
+          {selectedMovie ? (
+            <Col md={8}>
+              <MovieView
+                movie={selectedMovie}
+                onBackClick={(newSelectedMovie) => {
+                  this.setSelectedMovie(newSelectedMovie);
+                }}
+              />
+            </Col>
+          ) : (
+            movies.map((movie) => (
+              <Col md={3}>
+                <MovieCard
+                  key={movie._id}
+                  movie={movie}
+                  onMovieClick={(newSelectedMovie) => {
+                    this.setSelectedMovie(newSelectedMovie);
+                  }}
+                />
+              </Col>
+            ))
+          )}
+        </Row>
+      </Container>
+    </div>
+  );
+}
 }

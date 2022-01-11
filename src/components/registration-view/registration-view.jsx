@@ -1,49 +1,98 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { Card, Form, Button, Container, Col, Row } from "react-bootstrap";
+import "./registration-view.scss";
+import axios from "axios";
 
+export function RegistrationView(props) {
+  const [Username, setUsername] = useState("");
+  const [Password, setPassword] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Birthday, setBirthday] = useState("");
 
-export function RegistrationView(props){
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post(`https://movie-api-by-tammy.herokuapp.com/users`, {
+        Username: Username,
+        Password: Password,
+        Email: Email,
+        Birthday: Birthday,
+      })
+      .then((response) => {
+        const data = response.data;
+        console.log(data);
+        alert("Registration Success!");
+        window.open("/", "_self");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
-    const [ username, setUsername ] = useState('');
-    const [ password, setPassword ] = useState('');
-    const [ email, setEmail ] = useState('');
-    const [ birthday, setBirthday ] = useState('');
+  return (
+    <Container>
+      <Row>
+        <Col></Col>
+        <Col>
+          <Card className="registrationCard">
+            <p style={{ color: "white" }}>Create New Account</p>
 
+            <Form className="register-card" onSubmit={this.handleSubmit}>
+              <Form.Group controlId="formRegisterUsername">
+                <Form.Label style={{ color: "white" }}>Username:</Form.Label>
+                <Form.Control
+                  type="text"
+                  value={Username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </Form.Group>
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      props.onRegistration(username);
-    };
+              <Form.Group controlId="formRegisterPassword">
+                <Form.Label style={{ color: "white" }}>Password:</Form.Label>
+                <Form.Control
+                  type="password"
+                  value={Password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </Form.Group>
 
-    return (
-      <form>
-          <label>
-          Username:
-          <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
-          </label>
-          <label>
-          Password:
-          <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-          </label>
-          <button type="submit" onClick={handleSubmit}>Submit</button>
-          <label>
-          Email: 
-          <input type="email" valur={email} onChange={e => setEmail(e.target.value)} />
-          </label>
-          <label>
-          Birthday:
-          <input type="birthday" valur={birthday} onChange={e => setBirthday(e.target.value)} />
-          </label>
-      </form>
-      );
-      }
+              <Form.Group controlId="formEmail">
+                <Form.Label style={{ color: "white" }}>Email:</Form.Label>
+                <Form.Control
+                  type="email"
+                  value={Email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </Form.Group>
+
+              <Form.Group controlId="formBirthday">
+                <Form.Label style={{ color: "white" }}>Birthday:</Form.Label>
+                <Form.Control
+                  type="date"
+                  value={Birthday}
+                  onChange={(e) => setBirthday(e.target.value)}
+                />
+              </Form.Group>
+              <br />
+              <Button variant="primary" type="submit" onClick={handleSubmit}>
+                Register
+              </Button>
+            </Form>
+          </Card>
+        </Col>
+        <Col></Col>
+      </Row>
+    </Container>
+  );
+}
 
 RegistrationView.propTypes = {
-    register: PropTypes.shape({
-        username: PropTypes.string.isRequired,
-        password: PropTypes.string.isRequired,
-        email: PropTypes.string.isRequired,
-        birthday: PropTypes.string.isRequired
-    }),
-    onRegistration: PropTypes.func.isRequired
+  registeration: PropTypes.shape({
+    Username: PropTypes.string.isRequired,
+    Password: PropTypes.string.isRequired,
+    Email: PropTypes.string.isRequired,
+    Birthday: PropTypes.string,
+  }),
+  onRegistration: PropTypes.func,
 };

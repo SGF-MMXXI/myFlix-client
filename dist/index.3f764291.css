@@ -1,0 +1,80 @@
+.movie_genre {
+  font-size: smaller;
+  font-style: italic;
+  text-align: center;
+  color: #f4ddd5;
+  margin-bottom: 10px;
+}
+
+.poster {
+  height: 520px !important;
+  text-align: center;
+  padding: 10px;
+  background-color: black !important;
+}
+
+.movie_title {
+  height: 3em;
+  font-size: medium !important;
+  text-align: center;
+  background-color: #c48f7f;
+  color: white !important;
+  padding: 10px;
+}
+
+/* .button {
+  background-color: #fdc689 !important;
+} */
+.mvcard {
+  margin-top: 50px;
+}
+
+.movie_img {
+  width: 20% !important;
+}
+.movie-view {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.alignCenter {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+#title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.back-button {
+  margin-left: 20px;
+}
+.movie-view {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.alignCenter {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+#title {
+  font-size: 300px;
+  font-weight: bold;
+}
+
+.back-button {
+  margin-left: 20px;
+}
+
+/*# sourceMappingURL=index.3f764291.css.map */

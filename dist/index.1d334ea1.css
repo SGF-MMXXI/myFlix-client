@@ -1,0 +1,108 @@
+.login-container {
+  margin-top: 100px;
+}
+
+.loginCard {
+  background-color: darkblue !important;
+  width: 600px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.movie-genre {
+  font-size: smaller;
+  font-style: italic;
+  text-align: center;
+  color: #f4ddd5;
+  margin-bottom: 10px;
+}
+
+.movie-text {
+  color: white !important;
+}
+
+.poster {
+  height: 520px !important;
+  text-align: center;
+  padding: 10px;
+  background-color: black !important;
+}
+
+.movie-title {
+  height: 3em;
+  font-size: medium !important;
+  text-align: center;
+  padding: 10px;
+}
+
+/* .button {
+  background-color: #fdc689 !important;
+} */
+.movie-img {
+  width: 20% !important;
+}
+.movie-poster {
+  text-align: center;
+}
+
+.alignCenter {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.movie-title {
+  font-size: 90px;
+  font-weight: bold;
+}
+
+.back-button {
+  margin-left: 20px;
+}
+.registrationCard {
+  background-color: darkblue !important;
+  width: 600px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+.main-view {
+  background: black;
+  width: 100%;
+  display: inline-block;
+}
+
+.mainNavbar {
+  background: #162b48;
+}
+
+body {
+  font-family: "Teko", sans-serif !important;
+}
+
+.movie-view {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.alignCenter {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+#title {
+  font-size: 300px;
+  font-weight: bold;
+}
+
+.back-button {
+  margin-left: 20px;
+}
+
+/*# sourceMappingURL=index.1d334ea1.css.map */
