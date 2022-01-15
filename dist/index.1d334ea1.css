@@ -3,44 +3,68 @@
 }
 
 .loginCard {
-  background-color: darkblue !important;
+  background-color: #0070b5 !important;
   width: 600px;
   padding: 20px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
+.mv_card {
+  margin: 70px 0px 20px 0px;
+  background-color: #141414 !important;
+  color: black;
+}
+
 .movie-genre {
-  font-size: smaller;
+  font-size: 16px;
   font-style: italic;
   text-align: center;
-  color: #f4ddd5;
-  margin-bottom: 10px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.mv_title {
+  background-color: #0070b5 !important;
+  padding: 5px;
+  text-align: center;
+  color: #f5ed00 !important;
+  font-family: "Racing Sans One", cursive !important;
 }
 
 .movie-text {
   color: white !important;
+  margin-top: 20px;
+  text-align: center;
 }
 
-.poster {
-  height: 520px !important;
+.movie_img {
   text-align: center;
-  padding: 10px;
-  background-color: black !important;
 }
 
 .movie-title {
-  height: 3em;
+  height: 4em;
   font-size: medium !important;
   text-align: center;
   padding: 10px;
 }
 
-/* .button {
-  background-color: #fdc689 !important;
-} */
+.card-text {
+  background-color: white;
+  margin-top: -1em;
+  padding: 15px;
+}
+
 .movie-img {
   width: 20% !important;
 }
+
+.mvc_body {
+  margin-top: -3em;
+}
+.movie-view {
+  width: 100%;
+}
+
 .movie-poster {
   text-align: center;
 }
@@ -55,41 +79,33 @@
 }
 
 .movie-title {
-  font-size: 90px;
+  font-size: 28px !important;
   font-weight: bold;
+  color: #f5ed00 !important;
+  font-family: "Racing Sans One", cursive !important;
+  text-decoration: underline;
 }
 
-.back-button {
-  margin-left: 20px;
+.mview_body {
+  background-color: #0070b5 !important;
+  margin-top: 25px;
+  margin-bottom: 1em;
+  padding: 25px;
+  border-radius: 5px;
 }
-.registrationCard {
-  background-color: darkblue !important;
-  width: 600px;
-  padding: 20px;
-  margin-bottom: 50px;
+
+.mvBody_container {
+  margin-top: -2.5em;
 }
 .main-view {
-  background: black;
+  background: #141414;
   width: 100%;
   display: inline-block;
-}
-
-.mainNavbar {
-  background: #162b48;
-}
-
-body {
-  font-family: "Teko", sans-serif !important;
 }
 
 .movie-view {
   margin-top: 100px;
   margin-bottom: 50px;
-}
-
-.alignCenter {
-  text-align: center;
-  margin-top: 20px;
 }
 
 .label {
@@ -104,5 +120,19 @@ body {
 .back-button {
   margin-left: 20px;
 }
+body {
+  background: #141414 !important;
+}
 
+header {
+  text-align: center;
+  background-color: #0070b5 !important;
+  padding: 10px;
+}
+
+.logo {
+  color: #f5ed00 !important;
+  font-family: "Racing Sans One", cursive;
+  text-decoration: underline;
+}
 /*# sourceMappingURL=index.1d334ea1.css.map */

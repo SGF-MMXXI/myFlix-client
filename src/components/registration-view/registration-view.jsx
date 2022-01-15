@@ -8,15 +8,16 @@ export function RegistrationView(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
- 
+  const [Birthday, setBirthday] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('https://myflix-sgf.herokuapp.com/login', {
+      .post("https://myflix-sgf.herokuapp.com/users", {
         Username: username,
         Password: password,
         Email: email,
+        Birthday: Birthday
        
       })
       .then((response) => {
@@ -66,6 +67,14 @@ export function RegistrationView(props) {
                 />
               </Form.Group>
 
+              <Form.Group controlId="formBirthday">
+                <Form.Label style={{ color: "white" }}>Birthday:</Form.Label>
+                <Form.Control
+                  type="date"
+                  value={Birthday}
+                  onChange={(e) => setBirthday(e.target.value)}
+                />
+              </Form.Group>
              
               <br />
               <Button variant="primary" type="submit" onClick={handleSubmit}>
@@ -81,11 +90,14 @@ export function RegistrationView(props) {
 }
 
 RegistrationView.propTypes = {
-  registration: PropTypes.shape({
+  register: PropTypes.shape({
     username: PropTypes.string.isRequired,
     password: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
+    Birthday: PropTypes.string.isRequired
     
   }),
   onRegistration: PropTypes.func,
 };
+
+export default RegistrationView;
