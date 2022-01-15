@@ -5,19 +5,19 @@ import "./registration-view.scss";
 import axios from "axios";
 
 export function RegistrationView(props) {
-  const [Username, setUsername] = useState("");
-  const [Password, setPassword] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Birthday, setBirthday] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`https://movie-api-by-tammy.herokuapp.com/users`, {
-        Username: Username,
-        Password: Password,
-        Email: Email,
-        Birthday: Birthday,
+      .post('https://myflix-sgf.herokuapp.com/login', {
+        Username: username,
+        Password: password,
+        Email: email,
+       
       })
       .then((response) => {
         const data = response.data;
@@ -43,7 +43,7 @@ export function RegistrationView(props) {
                 <Form.Label style={{ color: "white" }}>Username:</Form.Label>
                 <Form.Control
                   type="text"
-                  value={Username}
+                  value={username}
                   onChange={(e) => setUsername(e.target.value)}
                 />
               </Form.Group>
@@ -52,7 +52,7 @@ export function RegistrationView(props) {
                 <Form.Label style={{ color: "white" }}>Password:</Form.Label>
                 <Form.Control
                   type="password"
-                  value={Password}
+                  value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </Form.Group>
@@ -61,19 +61,12 @@ export function RegistrationView(props) {
                 <Form.Label style={{ color: "white" }}>Email:</Form.Label>
                 <Form.Control
                   type="email"
-                  value={Email}
+                  value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </Form.Group>
 
-              <Form.Group controlId="formBirthday">
-                <Form.Label style={{ color: "white" }}>Birthday:</Form.Label>
-                <Form.Control
-                  type="date"
-                  value={Birthday}
-                  onChange={(e) => setBirthday(e.target.value)}
-                />
-              </Form.Group>
+             
               <br />
               <Button variant="primary" type="submit" onClick={handleSubmit}>
                 Register
@@ -88,11 +81,11 @@ export function RegistrationView(props) {
 }
 
 RegistrationView.propTypes = {
-  registeration: PropTypes.shape({
-    Username: PropTypes.string.isRequired,
-    Password: PropTypes.string.isRequired,
-    Email: PropTypes.string.isRequired,
-    Birthday: PropTypes.string,
+  registration: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    password: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    
   }),
   onRegistration: PropTypes.func,
 };
